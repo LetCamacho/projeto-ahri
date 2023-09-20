@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: 'The Fox Tail Regular';
+    src: url('../fontes/The-Fox-Tail-Regular.otf') format('opentype'), url('../fontes/The Fox Tail Regular.ttf') format('trutype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Foxes In Love';
+    src: url('../fontes/Foxes-In-Love.otf') format('opentype'), url('../fontes/Foxes In Love.ttf') format('trutype');
+}
+
+:root {
+    --cor1: #adc9f5;
+    --cor2: #495da8;
+    --cor3: #16297c;
+    --cor4: #48112E;
+    --cor5: #191126;
+
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-titulo: 'The Fox Tail Regular', 'cursive';
+    --fonte-destaque: 'Foxes In Love', sans-serif;
+}
+
+/*  --cor6: #364E68;   
+    --cor7: #58496A;   
+    --cor8: #71A8E8;
+    --cor9: #8bb0d3; */
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+body {
+    background-color: var(--cor2);
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4));
+    text-align: center;
+    min-height: 150px;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-titulo);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.473);
+
+}
+
+header > p {
+    font-family: var(--fonte-padrao);font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    max-width: 500px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.473);
+}
+
+nav {
+    background-color: var(--cor4);
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.301);
+}
+
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5seg;
+    
+}
+
+nav > a:hover {
+    background-color: var(--cor1);
+    color: var(--cor3);
+}
+
+main {
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 4px 5px 5px rgba(0, 0, 0, 0.301);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1 {
+    background-image: linear-gradient( to right, var(--cor1), transparent);
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 1.8em;
+    color: var(--cor5);
+    text-indent: 10px;
+}
+
+main h2 {
+    background-image: linear-gradient( to right, var(--cor1), transparent);
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 1.6em;
+    color: var(--cor5);
+    text-indent: 10px;
+}
+
+main p {
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    margin: 15px 0px;
+}
+
+main a {
+    text-decoration: none;
+    background-color: var(--cor1);
+    color: var(--cor3);
+    font-weight: bold;
+    padding: 2px 6px;
+}
+
+main a:hover {
+    color: var(--cor4);
+    text-decoration: underline;
+}
+
+main strong {
+    color: var(--cor5);
+    font-weight: bold;
+}
+
+main img {
+    width: 100%;
+}
+
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+ul {
+    line-height: 2em;
+    list-style-position: inside;
+    margin: 15px 0px;
+}
+
+ul.colunas {
+    list-style-type: '\2714\00A0\00A0';
+    columns: 2;
+}
+
+aside {
+    text-align: justify;
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.301);
+}
+
+aside h3 {
+    background-color: var(--cor4);
+    color: white;
+    margin: -10px -10px 0px -10px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    text-indent: 10px;
+}
+
+aside li > strong {
+    color: var(--cor5);
+    font-weight: bold;
+}
+
+aside > ul > li > ul {
+    columns: 2;
+}
+
+footer {
+    background-color: var(--cor4);
+    color: white;
+    padding: 9px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+footer > a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
